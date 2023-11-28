@@ -3,16 +3,28 @@ import { useOrderForm } from 'vtex.order-manager/OrderForm'
 import { useOrderItems } from 'vtex.order-items/OrderItems'
 
 const RefreshOrderForm = () => {
+  const { orderForm: { items } } = useOrderForm()
+  if (items && items.length > 0) {
+    return (<ExecuteUpdate />)
+  }
+
+  return (<></>)
+}
+
+const ExecuteUpdate = () => {
   const { orderForm: { items, id } } = useOrderForm()
   const { addItems } = useOrderItems()
 
   useEffect(() => {
     if (items.length > 0) {
-      addItems([
-        {
-          id: items[0].id, seller: items[0].seller, quantity: 0
-        }
-      ])
+      setTimeout(() => {
+        addItems([
+          {
+            id: items[0].id, seller: items[0].seller, quantity: 0
+          }
+        ])
+      }, 200)
+
     }
 
   }, [id])
