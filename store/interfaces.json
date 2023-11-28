@@ -1,0 +1,5 @@
+{
+  "refresh-minicart": {
+    "component": "RefreshOrderForm"
+  }
+}
