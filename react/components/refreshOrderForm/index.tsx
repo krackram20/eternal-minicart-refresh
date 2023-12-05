@@ -18,6 +18,7 @@ const ExecuteUpdate = () => {
 
   useEffect(() => {
     if (items.length > 0) {
+      console.log('executeee update')
       setTimeout(async () => {
         await updateManualPrice(items, loggedIn, id)
         await addItems([

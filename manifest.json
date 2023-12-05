@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "vtex.order-manager": "0.x",
-    "vtex.order-items": "0.x"
+    "vtex.order-items": "0.x",
+    "vtex.search-page-context": "0.x",
+    "vtex.search-result": "3.x"
   },
   "registries": [
     "smartcheckout"

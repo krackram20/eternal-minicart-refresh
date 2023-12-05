@@ -1,0 +1,3 @@
+query GetTranslation($args2: TranslateArgs!) {
+  translate(args: $args2)
+}

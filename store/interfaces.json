@@ -1,5 +1,10 @@
 {
   "refresh-minicart": {
     "component": "RefreshOrderForm"
+  },
+  "eternal-custom-sort": {
+    "component": "CustomSort",
+    "allowed": ["gallery"],
+    "composition": "children"
   }
 }
